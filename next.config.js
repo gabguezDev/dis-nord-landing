@@ -6,7 +6,7 @@ const nextConfig = {
 	basePath: "/dis-nord-landing",
 	images: {
 		loader: "akamai",
-		path: "",
+		path: "/dis-nord-landing",
 	},
 };
 
