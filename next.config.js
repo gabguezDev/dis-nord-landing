@@ -2,11 +2,11 @@
 const nextConfig = {
 	reactStrictMode: true,
 	swcMinify: true,
-	assetPrefix: "/dis-nord-landing",
-	basePath: "/dis-nord-landing",
+	assetPrefix: `${process.env.NEXT_PUBLIC_BASE_PATH}`,
+	basePath: `${process.env.NEXT_PUBLIC_BASE_PATH}`,
 	images: {
 		loader: "akamai",
-		path: "/dis-nord-landing",
+		path: `${process.env.NEXT_PUBLIC_BASE_PATH}`,
 	},
 };
 
