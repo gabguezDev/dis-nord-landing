@@ -98,7 +98,7 @@ const Navbar: FC<NavbarProps> = ({ isContactDialogOpen }: NavbarProps) => {
 											},
 									  }),
 							}}
-							href="/"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`}
 						>
 							Inicio
 						</Button>
