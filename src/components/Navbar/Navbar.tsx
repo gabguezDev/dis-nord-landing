@@ -86,7 +86,7 @@ const Navbar: FC<NavbarProps> = ({
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
-								...(actualPath === "/"
+								...(actualPath === `${process.env.NEXT_PUBLIC_BASE_PATH}/`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -102,7 +102,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/`}
 						>
 							Inicio
 						</Button>
@@ -112,7 +112,8 @@ const Navbar: FC<NavbarProps> = ({
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
-								...(actualPath === "/products/dogs"
+								...(actualPath ===
+								`${process.env.NEXT_PUBLIC_BASE_PATH}/products/dogs`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -128,7 +129,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/products/dogs"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/dogs`}
 						>
 							Perros
 						</Button>
@@ -140,7 +141,8 @@ const Navbar: FC<NavbarProps> = ({
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
 
-								...(actualPath === "/products/cats"
+								...(actualPath ===
+								`${process.env.NEXT_PUBLIC_BASE_PATH}/products/cats`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -156,7 +158,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/products/cats"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/cats`}
 						>
 							Gatos
 						</Button>
@@ -167,7 +169,8 @@ const Navbar: FC<NavbarProps> = ({
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
-								...(actualPath === "/products/birds"
+								...(actualPath ===
+								`${process.env.NEXT_PUBLIC_BASE_PATH}/products/birds`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -183,7 +186,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/products/birds"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/birds`}
 						>
 							Aves
 						</Button>
@@ -195,7 +198,8 @@ const Navbar: FC<NavbarProps> = ({
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
 
-								...(actualPath === "/products/others"
+								...(actualPath ===
+								`${process.env.NEXT_PUBLIC_BASE_PATH}/products/others`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -211,7 +215,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/products/others"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/others`}
 						>
 							Otros
 						</Button>
@@ -250,7 +254,7 @@ const Navbar: FC<NavbarProps> = ({
 								fontSize: { md: 18, lg: 20 },
 								fontFamily: "Mulish",
 
-								...(actualPath === "/about"
+								...(actualPath === `${process.env.NEXT_PUBLIC_BASE_PATH}/about`
 									? {
 											color: "#F5E1CE",
 											textDecoration: "underline",
@@ -266,7 +270,7 @@ const Navbar: FC<NavbarProps> = ({
 											},
 									  }),
 							}}
-							href="/about"
+							href={`${process.env.NEXT_PUBLIC_BASE_PATH}/about`}
 						>
 							Nosotros
 						</Button>
@@ -275,7 +279,7 @@ const Navbar: FC<NavbarProps> = ({
 				</Toolbar>
 			</AppBar>
 			<DrawerSideBar
-				actualPath="/"
+				actualPath={`${process.env.NEXT_PUBLIC_BASE_PATH}/`}
 				isOpen={isDrawerOpen}
 				isContactDialogOpen={false}
 				onCloseDrawer={handleDrawerOpen}

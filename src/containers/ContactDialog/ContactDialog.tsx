@@ -27,7 +27,7 @@ const ContactDialog = ({
 					>
 						Contactate con nosotros
 					</Typography>
-					<IconButton onClick={() => onClose(false)}>
+					<IconButton /* onClick={() => onClose(false)} */>
 						<CloseIcon />
 					</IconButton>
 				</Box>

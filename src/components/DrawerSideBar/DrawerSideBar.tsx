@@ -41,14 +41,15 @@ const DrawerSideBar = ({
 							? { ...styles.actualLink }
 							: { ...styles.notActualLink }),
 					}}
-					href="/products/dogs"
+					href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/dogs`}
 				>
 					Perros
 				</Button>
 				<Button
 					sx={{
 						...styles.link,
-						...(actualPath === "/products/cats"
+						...(actualPath ===
+						`${process.env.NEXT_PUBLIC_BASE_PATH}/products/cats`
 							? { ...styles.actualLink }
 							: { ...styles.notActualLink }),
 					}}
@@ -59,11 +60,12 @@ const DrawerSideBar = ({
 				<Button
 					sx={{
 						...styles.link,
-						...(actualPath === "/products/birds"
+						...(actualPath ===
+						`${process.env.NEXT_PUBLIC_BASE_PATH}/products/birds`
 							? { ...styles.actualLink }
 							: { ...styles.notActualLink }),
 					}}
-					href="/products/birds"
+					href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/birds`}
 				>
 					Aves
 				</Button>
@@ -74,7 +76,7 @@ const DrawerSideBar = ({
 							? { ...styles.actualLink }
 							: { ...styles.notActualLink }),
 					}}
-					href="/products/others"
+					href={`${process.env.NEXT_PUBLIC_BASE_PATH}/products/others`}
 				>
 					Otros
 				</Button>
@@ -92,11 +94,11 @@ const DrawerSideBar = ({
 					<Button
 						sx={{
 							...styles.link,
-							...(actualPath === "/about"
+							...(actualPath === `${process.env.NEXT_PUBLIC_BASE_PATH}/about`
 								? { ...styles.actualLink }
 								: { ...styles.notActualLink }),
 						}}
-						href="/about"
+						href={`${process.env.NEXT_PUBLIC_BASE_PATH}/about`}
 					>
 						Nosotros
 					</Button>
