@@ -2,8 +2,8 @@ export const styles = {
 	carouselWrapper: {
 		bgcolor: "#fff",
 		color: "#000",
-		height: "50vh",
+		height: "auto",
 		overflow: "hidden",
-		my: 2,
+		mb: 1,
 	},
 };
