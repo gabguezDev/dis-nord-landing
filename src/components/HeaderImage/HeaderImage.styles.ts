@@ -25,6 +25,6 @@ export const styles = {
 		justifyContent: "center",
 		alignItems: "center",
 		width: { xs: "auto", md: "50%", lg: "auto" },
-		height: { xs: "350px", md: "500px" },
+		height: { xs: "350px", sm: "400px", md: "500px" },
 	},
 };

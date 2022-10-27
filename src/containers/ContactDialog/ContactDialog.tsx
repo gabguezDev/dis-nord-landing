@@ -6,20 +6,24 @@ import CloseIcon from "@mui/icons-material/Close";
 
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Advertisement from "../../components/Advertisement/Advertisement";
+import { styles } from "./ContactDialog.styles";
 
 interface ContactDialogProps {
 	isContactDialogOpen: boolean;
 	onClose: (dialogOpen: boolean) => void;
 }
 
-const ContactDialog = ({ isContactDialogOpen }: ContactDialogProps) => {
+const ContactDialog = ({
+	isContactDialogOpen,
+	onClose,
+}: ContactDialogProps) => {
 	return (
 		<Dialog open={isContactDialogOpen}>
-			<Box sx={{ m: 3 }}>
+			<Box sx={styles.innerDialogContainer}>
 				<Box display="flex" alignItems="center">
 					<Typography
 						variant="h4"
-						sx={{ flex: 1, fontFamily: "Nunito", color: "#000" }}
+						sx={styles.dialogTitle}
 					>
 						Contactate con nosotros
 					</Typography>
@@ -28,12 +32,7 @@ const ContactDialog = ({ isContactDialogOpen }: ContactDialogProps) => {
 					</IconButton>
 				</Box>
 				<Box
-					sx={{
-						height: "100%",
-						display: "flex",
-						flexDirection: "column",
-						justifyContent: "center",
-					}}
+					sx={styles.contactFormWrapper}
 				>
 					<ContactForm />
 				</Box>
