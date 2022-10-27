@@ -15,8 +15,8 @@ const Homepage = () => {
 				text="Venta minorista y mayorista"
 				buttonText="Hacé tu pedido"
 			/>
+			<Header />
 			<Container maxWidth="xl">
-				<Header />
 				<Advertisement
 					height={200}
 					bgColor="#e80729"

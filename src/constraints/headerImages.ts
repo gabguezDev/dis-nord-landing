@@ -31,11 +31,11 @@ const headerImages = [
 		imgOverText: "Venta mayorista y minorista...",
 	},
 	{
-		imgSrc: headerImage7.src,
+		imgSrc: headerImage8.src,
 		imgOverText: "Elegí Calidad y Garantía...",
 	},
 	{
-		imgSrc: headerImage8.src,
+		imgSrc: headerImage7.src,
 		imgOverText: "Elegí Nordeste Distribuidora.",
 	},
 ];
