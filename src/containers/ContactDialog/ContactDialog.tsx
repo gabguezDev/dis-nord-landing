@@ -10,7 +10,7 @@ import { styles } from "./ContactDialog.styles";
 
 interface ContactDialogProps {
 	isContactDialogOpen: boolean;
-	onClose: (dialogOpen: boolean) => void;
+	onClose: () => void;
 }
 
 const ContactDialog = ({
@@ -21,19 +21,14 @@ const ContactDialog = ({
 		<Dialog open={isContactDialogOpen}>
 			<Box sx={styles.innerDialogContainer}>
 				<Box display="flex" alignItems="center">
-					<Typography
-						variant="h4"
-						sx={styles.dialogTitle}
-					>
+					<Typography variant="h4" sx={styles.dialogTitle}>
 						Contactate con nosotros
 					</Typography>
-					<IconButton onClick={() => onClose(false)}>
+					<IconButton onClick={onClose}>
 						<CloseIcon />
 					</IconButton>
 				</Box>
-				<Box
-					sx={styles.contactFormWrapper}
-				>
+				<Box sx={styles.contactFormWrapper}>
 					<ContactForm />
 				</Box>
 			</Box>
