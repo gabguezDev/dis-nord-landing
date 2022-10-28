@@ -83,6 +83,7 @@ const Navbar: FC<NavbarProps> = ({
 						<Button
 							//onClick={handleCloseNavMenu}
 							sx={{
+								width: "80px",
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
@@ -109,6 +110,7 @@ const Navbar: FC<NavbarProps> = ({
 						<Button
 							//onClick={handleCloseNavMenu}
 							sx={{
+								width: "80px",
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
@@ -137,7 +139,8 @@ const Navbar: FC<NavbarProps> = ({
 							//onClick={handleCloseNavMenu}
 
 							sx={{
-								m: 2,
+								width: "80px",
+								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
 
@@ -166,6 +169,7 @@ const Navbar: FC<NavbarProps> = ({
 							//onClick={handleCloseNavMenu}
 
 							sx={{
+								width: "80px",
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",
@@ -194,6 +198,7 @@ const Navbar: FC<NavbarProps> = ({
 							//onClick={handleCloseNavMenu}
 
 							sx={{
+								width: "80px",
 								my: 2,
 								fontSize: { lg: 20 },
 								fontFamily: "Mulish",

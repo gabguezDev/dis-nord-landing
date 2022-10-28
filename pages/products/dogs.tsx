@@ -1,9 +1,11 @@
+import { NextPage } from "next";
+
 import React from "react";
 
-type Props = {};
+import DogsProducts from "../../src/containers/Products/Dog/DogsProducts";
 
-const dog = (props: Props) => {
-	return <div>dog</div>;
+const Dog: NextPage = () => {
+	return <DogsProducts />;
 };
 
-export default dog;
+export default Dog;
