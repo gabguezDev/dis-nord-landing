@@ -4,7 +4,7 @@ import { styles } from "./DrawerSideBar.styles";
 
 interface IDrawerProps {
 	isOpen: boolean;
-	handleContactDialogOpen: () => void;
+	handleContactDialogOpen: (isOpen: boolean) => void;
 	isContactDialogOpen: boolean;
 	onCloseDrawer: () => void;
 	actualPath: string;
