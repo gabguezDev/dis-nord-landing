@@ -1,9 +1,8 @@
 import React from "react";
+import CatsProducts from "../../src/containers/Products/Cat/CatsProducts";
 
-type Props = {};
-
-const cats = (props: Props) => {
-	return <div>cats</div>;
+const cats = () => {
+	return <CatsProducts />;
 };
 
 export default cats;
