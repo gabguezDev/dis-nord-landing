@@ -84,7 +84,7 @@ const DrawerSideBar = ({
 				</Button>
 				<Hidden mdUp>
 					<Button
-						onClick={() => handleContactDialogOpen(true)}
+						onClick={handleContactDialogOpen}
 						sx={{
 							...styles.link,
 							...(isContactDialogOpen
