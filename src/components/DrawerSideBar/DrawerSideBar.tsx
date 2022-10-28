@@ -4,7 +4,7 @@ import { styles } from "./DrawerSideBar.styles";
 
 interface IDrawerProps {
 	isOpen: boolean;
-	handleContactDialogOpen: (isOpen: boolean) => void;
+	handleContactDialogOpen: () => void;
 	isContactDialogOpen: boolean;
 	onCloseDrawer: () => void;
 	actualPath: string;
@@ -84,7 +84,7 @@ const DrawerSideBar = ({
 				</Button>
 				<Hidden mdUp>
 					<Button
-						onClick={() => handleContactDialogOpen(true)}
+						onClick={handleContactDialogOpen}
 						sx={{
 							...styles.link,
 							...(isContactDialogOpen
