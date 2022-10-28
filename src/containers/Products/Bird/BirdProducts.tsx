@@ -22,11 +22,11 @@ const BirdsProducts = () => {
 					gap: 3,
 				}}
 			>
+				{/* <ProductCard />
 				<ProductCard />
 				<ProductCard />
 				<ProductCard />
-				<ProductCard />
-				<ProductCard />
+				<ProductCard /> */}
 			</Box>
 		</Box>
 	);
