@@ -14,7 +14,7 @@ const DrawerSideBar = ({
 	actualPath,
 	isOpen,
 	handleContactDialogOpen,
-	isContactDialogOpen
+	isContactDialogOpen,
 	onCloseDrawer,
 }: IDrawerProps) => {
 	return (
