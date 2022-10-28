@@ -281,7 +281,8 @@ const Navbar: FC<NavbarProps> = ({
 			<DrawerSideBar
 				actualPath={`${process.env.NEXT_PUBLIC_BASE_PATH}/`}
 				isOpen={isDrawerOpen}
-				isContactDialogOpen={false}
+				handleContactDialogOpen={handleContactDialogOpen}
+				isContactDialogOpen={isContactDialogOpen}
 				onCloseDrawer={handleDrawerOpen}
 			/>
 		</Box>
