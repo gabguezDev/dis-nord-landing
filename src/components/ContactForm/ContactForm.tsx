@@ -8,10 +8,11 @@ import {
 	Select,
 	MenuItem,
 } from "@mui/material";
-
-type Props = {};
+import useHandleSubmitForm from "./states/useHandleSubmitForm";
 
 const ContactForm = () => {
+	const { formik } = useHandleSubmitForm();
+
 	return (
 		<Box
 			component="form"
@@ -23,18 +24,15 @@ const ContactForm = () => {
 			}}
 		>
 			<Box
-				sx={{
-					display: "flex",
-					alignItems: "center",
-					justifyContent: "start",
-					gap: 3,
-				}}
+				sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}
 			>
 				<TextField
 					variant="standard"
 					helperText="Ingresa sólo tu nombre"
-					id="firstName"
+					id="name"
 					label="Nombre"
+					value={formik.values.name}
+					onChange={formik.handleChange}
 				/>
 
 				<TextField
@@ -42,38 +40,67 @@ const ContactForm = () => {
 					helperText="Ingresa sólo tu apellido"
 					id="lastName"
 					label="Apellido"
+					value={formik.values.lastName}
+					onChange={formik.handleChange}
 				/>
 			</Box>
 
 			<FormControl variant="standard" fullWidth>
-				<InputLabel id="demo-simple-select-label">
-					¿Cuál es tu motivo de contacto?
-				</InputLabel>
+				<InputLabel id="reason">¿Cuál es tu motivo de contacto?</InputLabel>
 				<Select
-					labelId="demo-simple-select-label"
-					id="demo-simple-select"
-					//value={age}
-					label="Age"
-					//onChange={handleChange}
+					id="reason"
+					label="reason"
+					name="reason"
+					value={formik.values.reason}
+					onChange={formik.handleChange}
 				>
-					<MenuItem value={10}>Compra minorista</MenuItem>
-					<MenuItem value={10}>Compra mayorista</MenuItem>
-					<MenuItem value={10}>Soy proveedor</MenuItem>
+					<MenuItem value={"Compra minorista"}>Compra minorista</MenuItem>
+					<MenuItem value={"Compra mayorista"}>Compra mayorista</MenuItem>
+					<MenuItem value={"Soy proveedor"}>Soy proveedor</MenuItem>
 				</Select>
 			</FormControl>
 
-			<TextField
-				variant="standard"
-				helperText="Ingresa tu número de teléfono"
-				id="phoneNumber"
-				label="Número de teléfono de contacto"
-			/>
+			<Box
+				sx={{ display: "flex", justifyContent: "space-between", width: "100%" }}
+			>
+				<TextField
+					variant="standard"
+					helperText={
+						<>
+							Ingresa el código de área.
+							<br /> Ej: 0370 o 011
+						</>
+					}
+					id="dialCode"
+					name="dialCode"
+					label="Código de área"
+					value={formik.values.dialCode}
+					onChange={formik.handleChange}
+				/>
+				<TextField
+					variant="standard"
+					helperText={
+						<>
+							Ingresa tu número de teléfono.
+							<br /> Ej: 154123456
+						</>
+					}
+					id="contactNumber"
+					name="contactNumber"
+					label="Número de teléfono"
+					value={formik.values.contactNumber}
+					onChange={formik.handleChange}
+				/>
+			</Box>
 
 			<TextField
 				placeholder="Escribe aquí tu consulta o mensaje (opcional)"
+				name="message"
 				multiline
 				rows={2}
 				maxRows={5}
+				value={formik.values.message}
+				onChange={formik.handleChange}
 			/>
 
 			<Button variant="contained" sx={{ height: "50px", bgcolor: "#009929" }}>

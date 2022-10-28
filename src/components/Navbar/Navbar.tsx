@@ -20,9 +20,13 @@ import useDrawer from "./states/useDrawer";
 
 interface NavbarProps {
 	isContactDialogOpen: boolean;
+	handleContactDialogOpen: () => void;
 }
 
-const Navbar: FC<NavbarProps> = ({ isContactDialogOpen }: NavbarProps) => {
+const Navbar: FC<NavbarProps> = ({
+	isContactDialogOpen,
+	handleContactDialogOpen,
+}: NavbarProps) => {
 	const router = useRouter();
 
 	const actualPath = router.pathname;
@@ -219,7 +223,7 @@ const Navbar: FC<NavbarProps> = ({ isContactDialogOpen }: NavbarProps) => {
 
 					<Box sx={{ display: { xs: "none", md: "flex" } }}>
 						<Button
-							//onClick={handleCloseNavMenu}
+							onClick={handleContactDialogOpen}
 							sx={{
 								my: 2,
 								fontSize: { md: 18, lg: 20 },
